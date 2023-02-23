@@ -1,0 +1,21 @@
+benchmarks:
+  init-1:
+    deployment-quantity: 50
+    processes-per-deployment-quantity: 2000
+    process-variables-quantity: 50
+    process:
+      deployment-url: http://localhost:8080/engine-rest/deployment/create
+      start-process-url: http://localhost:8080/engine-rest/process-definition/key/Benchmarks_Process_1/start
+      bpmn-diagram-name: Benchmarks_Process_1.bpmn
+      bpmn-diagram: ./../bpmn-diagrams/Benchmarks_Process_1.bpmn
+  init-2:
+    deployment-quantity: 2
+    processes-per-deployment-quantity: 30
+    process-variables-quantity: 30
+    process:
+      deployment-url: http://localhost:8080/engine-rest/deployment/create
+      start-process-url: http://localhost:8080/engine-rest/process-definition/key/Benchmarks_Process_2_1/start
+      main-process-bpmn-diagram-name: Benchmarks_Process_2_1.bpmn
+      main-process-bpmn-diagram: ./../bpmn-diagrams/Benchmarks_Process_2_1.bpmn
+      subprocess-bpmn-diagram-name: Benchmarks_Process_2_2.bpmn
+      subprocess-bpmn-diagram: ./../bpmn-diagrams/Benchmarks_Process_2_2.bpmn

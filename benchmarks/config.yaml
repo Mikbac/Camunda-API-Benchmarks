@@ -1,0 +1,5 @@
+benchmarks:
+  benchmark-1:
+    count-url: http://localhost:8080/engine-rest/history/process-instance/count
+    # Benchmarks_Process_1 | Benchmarks_Process_2_1 | Benchmarks_Process_2_2
+    process: Benchmarks_Process_1

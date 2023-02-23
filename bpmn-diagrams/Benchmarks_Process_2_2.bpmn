@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:modeler="http://camunda.org/schema/modeler/1.0" id="Definitions_0xncrko" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="5.8.0" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.18.0">
+  <bpmn:process id="Benchmarks_Process_2_2" name="Benchmarks process 2-2" isExecutable="true">
+    <bpmn:startEvent id="Event_182bi5e">
+      <bpmn:outgoing>Flow_1kgekhd</bpmn:outgoing>
+    </bpmn:startEvent>
+    <bpmn:scriptTask id="Script_Task_1" name="Script task 1" scriptFormat="groovy">
+      <bpmn:incoming>Flow_1kgekhd</bpmn:incoming>
+      <bpmn:outgoing>Flow_0x0dlip</bpmn:outgoing>
+      <bpmn:script>execution.setVariable('procVar11', 1)</bpmn:script>
+    </bpmn:scriptTask>
+    <bpmn:scriptTask id="Script_Task_2" name="Script task 2" scriptFormat="groovy">
+      <bpmn:incoming>Flow_0x0dlip</bpmn:incoming>
+      <bpmn:outgoing>Flow_1429vc4</bpmn:outgoing>
+      <bpmn:script>execution.setVariable('procVar21', 2)</bpmn:script>
+    </bpmn:scriptTask>
+    <bpmn:scriptTask id="Script_Task_3" name="Script task 3" scriptFormat="groovy">
+      <bpmn:incoming>Flow_1429vc4</bpmn:incoming>
+      <bpmn:outgoing>Flow_107ykl3</bpmn:outgoing>
+      <bpmn:script>execution.setVariable('procVar31', 3)</bpmn:script>
+    </bpmn:scriptTask>
+    <bpmn:scriptTask id="Script_Task_4" name="Script task 4" scriptFormat="groovy">
+      <bpmn:incoming>Flow_107ykl3</bpmn:incoming>
+      <bpmn:outgoing>Flow_0duy4yk</bpmn:outgoing>
+      <bpmn:script>execution.setVariable('procVar41', 4)</bpmn:script>
+    </bpmn:scriptTask>
+    <bpmn:scriptTask id="Activity_1nw0h5v" name="Script task 5" scriptFormat="groovy">
+      <bpmn:incoming>Flow_0duy4yk</bpmn:incoming>
+      <bpmn:outgoing>Flow_05f4k42</bpmn:outgoing>
+      <bpmn:script>execution.setVariable('procVar51', 5)</bpmn:script>
+    </bpmn:scriptTask>
+    <bpmn:endEvent id="Event_0n69g1r">
+      <bpmn:incoming>Flow_05f4k42</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="Flow_1kgekhd" sourceRef="Event_182bi5e" targetRef="Script_Task_1" />
+    <bpmn:sequenceFlow id="Flow_0x0dlip" sourceRef="Script_Task_1" targetRef="Script_Task_2" />
+    <bpmn:sequenceFlow id="Flow_1429vc4" sourceRef="Script_Task_2" targetRef="Script_Task_3" />
+    <bpmn:sequenceFlow id="Flow_107ykl3" sourceRef="Script_Task_3" targetRef="Script_Task_4" />
+    <bpmn:sequenceFlow id="Flow_0duy4yk" sourceRef="Script_Task_4" targetRef="Activity_1nw0h5v" />
+    <bpmn:sequenceFlow id="Flow_05f4k42" sourceRef="Activity_1nw0h5v" targetRef="Event_0n69g1r" />
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="Benchmarks_Process_2_2">
+      <bpmndi:BPMNShape id="BPMNShape_1jmrpdl" bpmnElement="Event_182bi5e">
+        <dc:Bounds x="179" y="102" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0pipclk_di" bpmnElement="Script_Task_1">
+        <dc:Bounds x="257" y="80" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_142iou0_di" bpmnElement="Script_Task_2">
+        <dc:Bounds x="397" y="80" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_19reify_di" bpmnElement="Script_Task_3">
+        <dc:Bounds x="537" y="80" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0wvme5s_di" bpmnElement="Script_Task_4">
+        <dc:Bounds x="677" y="80" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_13wzjg1" bpmnElement="Activity_1nw0h5v">
+        <dc:Bounds x="817" y="80" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_118lr91" bpmnElement="Event_0n69g1r">
+        <dc:Bounds x="959" y="102" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="Flow_1kgekhd_di" bpmnElement="Flow_1kgekhd">
+        <di:waypoint x="215" y="120" />
+        <di:waypoint x="257" y="120" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0x0dlip_di" bpmnElement="Flow_0x0dlip">
+        <di:waypoint x="357" y="120" />
+        <di:waypoint x="397" y="120" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1429vc4_di" bpmnElement="Flow_1429vc4">
+        <di:waypoint x="497" y="120" />
+        <di:waypoint x="537" y="120" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_107ykl3_di" bpmnElement="Flow_107ykl3">
+        <di:waypoint x="637" y="120" />
+        <di:waypoint x="677" y="120" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0duy4yk_di" bpmnElement="Flow_0duy4yk">
+        <di:waypoint x="777" y="120" />
+        <di:waypoint x="817" y="120" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_0wigco2" bpmnElement="Flow_05f4k42">
+        <di:waypoint x="917" y="120" />
+        <di:waypoint x="959" y="120" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>
