@@ -15,7 +15,15 @@ def get_results(process):
 	url = get_config().get('count-url')
 
 	payload = json.dumps({
-		'processDefinitionKey': process
+		'processDefinitionKey': process,
+		"active": False,
+		"variables": [
+			{
+				"name": "proc_var_start_1",
+				"value": "1",
+				"operator": "eq"
+			}
+		]
 	})
 	headers = {
 		'Content-Type': 'application/json'

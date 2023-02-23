@@ -54,8 +54,8 @@ if __name__ == '__main__':
 	proces_deploy_quantity = config.get('deployment-quantity')
 	proceses_quantity = config.get('processes-per-deployment-quantity')
 
-	for _ in range(proces_deploy_quantity):
+	for i in range(proces_deploy_quantity):
 		deploy_process()
-		for j in range(proceses_quantity):
-			print(j)
+		print('{}/{}'.format(i, proces_deploy_quantity))
+		for _ in range(proceses_quantity):
 			start_processes()
