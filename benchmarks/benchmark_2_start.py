@@ -16,14 +16,6 @@ def get_results(process):
 
 	payload = json.dumps({
 		'processDefinitionKey': process,
-		"active": False,
-		"variables": [
-			{
-				"name": "proc_var_start_1",
-				"value": 1,
-				"operator": "eq"
-			}
-		]
 	})
 	headers = {
 		'Content-Type': 'application/json'
