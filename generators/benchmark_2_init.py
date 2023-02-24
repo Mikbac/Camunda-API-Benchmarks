@@ -8,7 +8,7 @@ import yaml
 
 def get_config():
 	with open('config.yaml', 'r') as f:
-		return yaml.safe_load(f).get('benchmarks').get('init-2')
+		return yaml.safe_load(f).get('benchmarks').get('init-2-1')
 
 
 def deploy_process(diagram, url, diagram_name):
@@ -63,8 +63,8 @@ if __name__ == '__main__':
 	proces_deploy_quantity = config.get('deployment-quantity')
 	proceses_quantity = config.get('processes-per-deployment-quantity')
 
-	for _ in range(proces_deploy_quantity):
+	for i in range(proces_deploy_quantity):
 		deploy_diagrams()
-		for j in range(proceses_quantity):
-			print(j)
+		print('{}/{}'.format(i + 1, proces_deploy_quantity))
+		for _ in range(proceses_quantity):
 			start_processes()

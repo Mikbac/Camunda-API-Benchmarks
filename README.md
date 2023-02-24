@@ -1,5 +1,9 @@
 # Camunda API Benchmarks
 
+## [Results of benchmarks](results%2FResults.md)
+
+## [Scenarios](scenarios)
+
 ## Docker composes
 
 1. Basic
@@ -14,6 +18,8 @@
 
 ## Processes
 
-| Name                 | ID                   | Diagram                                                                        |
-|----------------------|----------------------|--------------------------------------------------------------------------------|
-| Benchmarks process 1 | Benchmarks_Process_1 | ![Benchmarks process 1](./img/Benchmarks_Process_1.PNG "Benchmarks process 1") |
+| Name                   | ID                     | Diagram                                                                            |
+|------------------------|------------------------|------------------------------------------------------------------------------------|
+| Benchmarks process 1   | Benchmarks_Process_1   | ![Benchmarks process 1](./img/Benchmarks_Process_1.png "Benchmarks process 1")     |
+| Benchmarks process 2-1 | Benchmarks_Process_2_1 | ![Benchmarks process 1](./img/Benchmarks_Process_2_1.png "Benchmarks process 2-1") |
+| Benchmarks process 2-2 | Benchmarks_Process_2_2 | ![Benchmarks process 1](./img/Benchmarks_Process_2_2.png "Benchmarks process 2-2") |
