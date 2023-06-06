@@ -101,10 +101,10 @@ init-2-1:
   process-variables-quantity: 50
 ```
 
-|                              | Test 1 | Test 2 | Test 3 | Average |
-|------------------------------|--------|--------|--------|---------|
-| **Response time in seconds** |        |        |        |         | 
-| **Volume size in GB**        |        |        |        |         | 
+|                              | Test 1   | Test 2   | Test 3   | Average |
+|------------------------------|----------|----------|----------|---------|
+| **Response time in seconds** | 0.263542 | 0.561167 | 0.306137 | 0.3769  | 
+| **Volume size in GB**        | 7.284    | 7.285    | 7.288    | 7.2856  | 
 
 -----------------------------------------------------------------------------------------
 
@@ -149,10 +149,10 @@ With indexes:
 * `CREATE INDEX IF NOT EXISTS act_re_procdef_key ON act_re_procdef (key_)`
 * `CREATE INDEX IF NOT EXISTS act_re_procdef_tenant_id ON act_re_procdef (tenant_id_)`
 
-|                              | Test 1 | Test 2 | Test 3 | Average |
-|------------------------------|--------|--------|--------|---------|
-| **Response time in seconds** |        |        |        |         | 
-| **Volume size in GB**        |        |        |        |         | 
+|                              | Test 1   | Test 2   | Test 3   | Average |
+|------------------------------|----------|----------|----------|---------|
+| **Response time in seconds** | 0.246631 | 0.307767 | 0.298751 | 0.2843  | 
+| **Volume size in GB**        | 7.285    | 7.284    | 7.293    | 7.2873  | 
 
 -----------------------------------------------------------------------------------------
 
